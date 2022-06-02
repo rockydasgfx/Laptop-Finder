@@ -5,24 +5,31 @@ import "./Shop.css";
 
 const Shop = () => {
   const [products, setProducts] = useState([]);
-
+  const [cart, setCart] = useState([]);
   useEffect(() => {
     fetch("./data/data.json")
       .then((res) => res.json())
       .then((data) => setProducts(data));
   }, []);
 
-  const selectedItem = (product) => {};
+  const selectedItem = (product) => {
+    const newCart = [...cart, product];
+    setCart(newCart);
+  };
 
   return (
     <main>
       <section className="shop">
         {products.map((product) => (
-          <Product key={product.id} product={product} />
+          <Product
+            key={product.id}
+            product={product}
+            selectedItem={selectedItem}
+          />
         ))}
       </section>
       <section className="selected">
-        <Selected />
+        <Selected products={cart} />
       </section>
     </main>
   );
