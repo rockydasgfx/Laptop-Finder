@@ -12,6 +12,8 @@ const Shop = () => {
       .then((data) => setProducts(data));
   }, []);
 
+  const selectedItem = (product) => {};
+
   return (
     <main>
       <section className="shop">
