@@ -1,0 +1,14 @@
+main {
+  max-width: 90%;
+  margin: 10px auto;
+  display: grid;
+  grid-template-columns: 4fr 2fr;
+}
+
+.shop {
+  background: red;
+}
+
+.selected {
+  background-color: blue;
+}
