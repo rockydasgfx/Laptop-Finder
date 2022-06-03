@@ -6,6 +6,8 @@ import "./Shop.css";
 const Shop = () => {
   const [products, setProducts] = useState([]);
   const [cart, setCart] = useState([]);
+  const [choose, setChoose] = useState({});
+
   useEffect(() => {
     fetch("./data/data.json")
       .then((res) => res.json())
@@ -15,6 +17,16 @@ const Shop = () => {
   const selectedItem = (product) => {
     const newCart = [...cart, product];
     setCart(newCart);
+  };
+
+  const chooseItem = () => {
+    const product = cart[Math.floor(Math.random() * cart.length)];
+    setChoose(product);
+  };
+
+  const chooseAgain = () => {
+    setCart([]);
+    setChoose({});
   };
 
   return (
@@ -29,7 +41,12 @@ const Shop = () => {
         ))}
       </section>
       <section className="selected">
-        <Selected products={cart} />
+        <Selected
+          cart={cart}
+          choose={choose}
+          chooseAgain={chooseAgain}
+          chooseItem={chooseItem}
+        />
       </section>
     </main>
   );

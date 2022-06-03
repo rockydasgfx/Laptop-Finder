@@ -6,13 +6,12 @@ const Product = (props) => {
   const { img, name, price } = product;
   return (
     <div className="product">
+      <img src={img} alt="" />
       <div>
-        <img src={img} alt="" />
-        <div>
-          <p>{name}</p>
-          <p>Price: ${price}</p>
-        </div>
+        <p>{name}</p>
+        <p>Price: ${price}</p>
       </div>
+
       <button onClick={() => selectedItem(product)}>Add to Cart</button>
     </div>
   );
