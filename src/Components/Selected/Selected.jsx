@@ -1,14 +1,17 @@
+import SelectedProduct from "../SelectedProduct/SelectedProduct";
 import "./Selected.css";
 
 const Selected = (props) => {
   const { cart, chooseAgain, chooseItem, choose } = props;
-  console.log(choose);
+
   return (
-    <div>
-      <h1>From Selected</h1>
-      {cart.map((product) => (
-        <p key={product.id}>{product.name}</p>
-      ))}
+    <div className="selected">
+      <h2>Selected Laptop</h2>
+      <div className="selectedItem">
+        {cart.map((product) => (
+          <SelectedProduct key={product.id} product={product} />
+        ))}
+      </div>
       <br />
       <br />
       <button onClick={chooseItem}>Choose One</button>

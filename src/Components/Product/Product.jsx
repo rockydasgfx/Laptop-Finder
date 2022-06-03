@@ -7,9 +7,9 @@ const Product = (props) => {
   return (
     <div className="product">
       <img src={img} alt="" />
-      <div>
-        <p>{name}</p>
-        <p>Price: ${price}</p>
+      <div className="content">
+        <p className="name">{name}</p>
+        <p>Price: &#2547; {price}</p>
       </div>
 
       <button onClick={() => selectedItem(product)}>Add to Cart</button>
