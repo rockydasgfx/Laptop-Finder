@@ -1,3 +1,11 @@
 .selected {
   padding-left: 10px;
 }
+
+.btn {
+  background-color: gray;
+  padding: 5px 10px;
+  border: none;
+  color: white;
+  cursor: pointer;
+}

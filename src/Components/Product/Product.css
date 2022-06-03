@@ -1,5 +1,6 @@
 .product img {
   width: 200px;
+  margin: 0 auto;
 }
 
 .product {
@@ -31,4 +32,5 @@ p:last-child {
   color: white;
   border: none;
   justify-content: center;
+  cursor: pointer;
 }

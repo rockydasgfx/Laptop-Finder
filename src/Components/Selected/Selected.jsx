@@ -14,10 +14,14 @@ const Selected = (props) => {
       </div>
       <br />
       <br />
-      <button onClick={chooseItem}>Choose One</button>
-      <p>{choose.name}</p>
+      <button onClick={chooseItem} className="btn">
+        Choose One
+      </button>
+      <SelectedProduct product={choose} />
 
-      <button onClick={chooseAgain}>Choose Again</button>
+      <button onClick={chooseAgain} className="btn">
+        Choose Again
+      </button>
     </div>
   );
 };
