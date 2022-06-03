@@ -29,8 +29,11 @@ p:last-child {
   background: gray;
   width: 100%;
   padding: 5px 0;
-  color: white;
+  color: #ffffff;
   border: none;
   justify-content: center;
+  align-items: center;
+  display: flex;
   cursor: pointer;
 }
+

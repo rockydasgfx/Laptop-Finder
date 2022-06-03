@@ -1,4 +1,5 @@
 import React from "react";
+import "boxicons";
 import "./Product.css";
 
 const Product = (props) => {
@@ -12,7 +13,9 @@ const Product = (props) => {
         <p>Price: &#2547; {price}</p>
       </div>
 
-      <button onClick={() => selectedItem(product)}>Add to Cart</button>
+      <button onClick={() => selectedItem(product)}>
+        Add to Cart <box-icon className="icon" name="cart"></box-icon>
+      </button>
     </div>
   );
 };
